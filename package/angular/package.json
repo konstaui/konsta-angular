@@ -1,0 +1,45 @@
+{
+  "name": "konsta",
+  "version": "5.0.4",
+  "description": "Mobile UI components for Angular made with Tailwind CSS",
+  "private": false,
+  "main": "./konsta-angular.js",
+  "module": "./konsta-angular.js",
+  "types": "./konsta-angular.d.ts",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./konsta-angular.d.ts",
+      "import": "./konsta-angular.js",
+      "default": "./konsta-angular.js"
+    },
+    "./theme.css": {
+      "default": "./theme.css"
+    },
+    "./styles": {
+      "default": "./theme.css"
+    }
+  },
+  "peerDependencies": {
+    "@angular/common": ">=14.0.0",
+    "@angular/core": ">=14.0.0",
+    "tailwindcss": ">=3.0.0"
+  },
+  "keywords": [
+    "angular",
+    "components",
+    "ui",
+    "mobile",
+    "tailwind",
+    "tailwindcss",
+    "ios",
+    "material",
+    "design"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/konsta.git"
+  }
+}

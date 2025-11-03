@@ -1,5 +1,6 @@
 # Konsta UI - Angular
 
+WIP: 65% complete
 **Autonomous Angular Fork v5.0.4**
 
 Pixel perfect mobile UI components built with Tailwind CSS for Angular. Features iOS and Material Design components optimized for mobile applications.

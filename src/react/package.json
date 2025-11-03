@@ -1,6 +1,0 @@
-{
-  "name": "konsta/react",
-  "private": true,
-  "jsnext:main": "./konsta-react.js",
-  "module": "./konsta-react.js"
-}

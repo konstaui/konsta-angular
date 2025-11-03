@@ -7,7 +7,7 @@
     "url": "https://github.com/konstaui/konsta.git"
   },
   "keywords": [],
-  "author": "Vladimir Kharlampidi",
+  "author": "Martin Donadieu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/konstaui/konsta/issues"
@@ -17,7 +17,6 @@
     "node": ">= 4.7.0"
   },
   "releaseDate": "August 18, 2025",
-  "svelte": "./svelte/konsta-svelte.js",
   "dependencies": {
     "tailwind-merge": "^3.3.1"
   },
@@ -29,23 +28,6 @@
       "import": "./angular/konsta-angular.js"
     },
     "./angular/theme.css": "./angular/theme.css",
-    "./react": {
-      "types": "./react/konsta-react.d.ts",
-      "import": "./react/konsta-react.js"
-    },
-    "./react/theme.css": "./react/theme.css",
-    "./vue": {
-      "types": "./vue/konsta-vue.d.ts",
-      "require": "./vue/konsta-vue.js",
-      "import": "./vue/konsta-vue.js"
-    },
-    "./vue/theme.css": "./vue/theme.css",
-    "./svelte": {
-      "types": "./svelte/konsta-svelte.d.ts",
-      "import": "./svelte/konsta-svelte.js",
-      "svelte": "./svelte/konsta-svelte.js"
-    },
-    "./svelte/theme.css": "./svelte/theme.css",
     "./config": "./config.js",
     "./config.js": "./config.js"
   }

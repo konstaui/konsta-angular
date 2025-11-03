@@ -1,64 +1,100 @@
-![Konsta UI](https://konstaui.com/images/share-banner.png)
+# Konsta UI - Angular
 
-# Konsta UI
+**Autonomous Angular Fork v5.0.4**
 
-Konsta UI - Pixel perfect mobile UI components built with Tailwind CSS with iOS and Material Design components for React, Vue & Svelte
+Pixel perfect mobile UI components built with Tailwind CSS for Angular. Features iOS and Material Design components optimized for mobile applications.
 
-## Sponsors
+This is an autonomous fork of the original Konsta UI project, focused exclusively on Angular support with modern exports and package structure.
 
-<!-- SPONSORS_TABLE_WRAP -->
-<table>
-  <tr>
-    <td align="center" valign="middle">
-      <a href="https://slovenskecasino.net/" target="_blank">
-        <img src="https://konstaui.com/images/sponsors/slovenskecasino-net.png" alt="Najlepšie Slovenské Online Kasina" width="160">
-      </a>
-    </td>
-    <td align="center" valign="middle">
-      <a href="https://novecasino.net/" target="_blank">
-        <img src="https://konstaui.com/images/sponsors/novecasino-net.png" alt="Nove Casino" width="160">
-      </a>
-    </td>
-    <td align="center" valign="middle">
-      <a href="https://leofame.com/" target="_blank">
-        <img src="https://konstaui.com/images/sponsors/leofame.png" alt="Buy Instagram Followers & Likes" width="160">
-      </a>
-    </td>
-    <td align="center" valign="middle"></td>
-    <td align="center" valign="middle"></td>
-    <td align="center" valign="middle"></td>
-    <td align="center" valign="middle"></td>
-    <td align="center" valign="middle"></td>
-  </tr>
-</table>
-<!-- SPONSORS_TABLE_WRAP -->
+## Features
 
-## Documentation
+- 65+ Angular components
+- iOS and Material Design themes
+- Built with Tailwind CSS
+- TypeScript support
+- Standalone component architecture
+- Modern package exports
+- Zero dependencies (except peer dependencies)
 
-Documentation available at https://konstaui.com
+## Installation
 
-## Konsta UI Development
+```bash
+npm install konsta
+```
+
+## Peer Dependencies
+
+```bash
+npm install @angular/common @angular/core tailwindcss
+```
+
+## Usage
+
+Import components and styles in your Angular application:
+
+```typescript
+import { Component } from '@angular/core';
+import { KButton } from 'konsta';
+import 'konsta/theme.css';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [KButton],
+  template: `
+    <k-button>Click me</k-button>
+  `
+})
+export class AppComponent {}
+```
+
+## Development
 
 First, install all dependencies:
 
+```bash
+npm install
 ```
-$ npm install
+
+### Production Build
+
+To build the production version:
+
+```bash
+npm run build
 ```
 
-### Production Builds
+Compiled results will be available in the `package/` folder.
 
-To build production versions the following npm scripts are available:
+### Development Server
 
-- `build` - build production version
+To run the Kitchen Sink demo with development environment:
 
-Compiled results will be available in `package/` folder.
+```bash
+npm run dev
+```
 
-## Kitchen Sink
+or
 
-To run Kitchen Sink with development environment (development version will be built first) use the following npm scripts:
+```bash
+npm run angular
+```
 
-- `react` - build development version of Konsta UI React package and run React Kitchen Sink
+## Project Structure
+
+- `src/angular/` - Angular component source code
+- `src/shared/` - Framework-agnostic utilities and classes
+- `src/styles/` - Global CSS styles
+- `kitchen-sink/angular/` - Demo application
 
 ## Contributing
 
-All changes should be committed to `src/` files only. Before you open an issue please review the [contributing guideline](https://github.com/konstaui/konsta/blob/master/CONTRIBUTING.md).
+All changes should be committed to `src/` files only.
+
+## License
+
+MIT
+
+## Original Project
+
+This is an autonomous fork of [Konsta UI](https://github.com/konstaui/konsta) by Vladimir Kharlampidi.

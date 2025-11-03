@@ -1,8 +1,8 @@
-import exec from 'exec-sh';
+import fs from 'fs';
 
 export default async (outputDir = 'package') => {
-  // Babel
-  await exec.promise(
-    `cross-env MODULES=esm npx babel --config-file ./babel.config.react.js src/shared --out-dir ${outputDir}/shared`
-  );
+  // Copy shared directory directly (no transpilation needed for Angular)
+  fs.cpSync('./src/shared', `${outputDir}/shared`, {
+    recursive: true,
+  });
 };

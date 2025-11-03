@@ -4,16 +4,8 @@ const rules = {
   'prefer-destructuring': ['off'],
   'prefer-object-spread': ['off'],
   'prefer-ob': ['off'],
-  'react/react-in-jsx-scope': ['off'],
-  'react/no-string-refs': ['off'],
-  'react/prop-types': ['off'],
-  'react/function-component-definition': ['off'],
-  'react/jsx-no-constructed-context-values': ['off'],
   'no-restricted-globals': ['error', 'window', 'document'],
   'import/prefer-default-export': 'off',
-  'react/jsx-one-expression-per-line': 'off',
-  'react/jsx-wrap-multilines': 'off',
-  'react/jsx-props-no-spreading': ['off'],
   'import/no-extraneous-dependencies': ['off'],
   'import/no-relative-packages': ['off'],
   'no-constructor-return': ['off'],
@@ -25,15 +17,11 @@ const rules = {
       ignorePackages: true,
       pattern: {
         js: 'always',
-        jsx: 'always',
         json: 'always',
       },
     },
   ],
   'no-nested-ternary': ['off'],
-  'jsx-a11y/click-events-have-key-events': ['off'],
-  'jsx-a11y/no-static-element-interactions': ['off'],
-  'react/destructuring-assignment': ['off'],
 };
 
 module.exports = {
@@ -42,80 +30,27 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['airbnb-base'],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: [],
   rules: {},
   overrides: [
-    // REACT
+    // JavaScript/TypeScript
     {
-      files: ['**/*.jsx', '**/*.js', '**/*.ts'],
+      files: ['**/*.js', '**/*.ts'],
       extends: [
-        'plugin:react/recommended',
         'airbnb-base',
         'plugin:prettier/recommended',
       ],
-      plugins: ['react'],
       rules: { ...rules },
     },
-    {
-      files: ['**/*.jsx', 'src/react/shared/*.js'],
-      rules: {
-        ...rules,
-        'import/no-extraneous-dependencies': ['off'],
-        'no-dupe-keys': ['off'],
-      },
-    },
 
-    // REACT KITCHEN_SINK
+    // Angular Kitchen Sink
     {
-      files: ['kitchen-sink/react/**/*.jsx', 'kitchen-sink/react/**/*.js'],
-      rules: {
-        ...rules,
-
-        'react/display-name': ['off'],
-        'react/jsx-no-target-blank': ['off'],
-        'react/no-unescaped-entities': ['off'],
-        'no-console': ['off'],
-        'no-restricted-globals': ['off'],
-        'no-nested-ternary': ['off'],
-        'import/no-unresolved': ['off'],
-        'import/no-extraneous-dependencies': ['off'],
-        'jsx-a11y/anchor-is-valid': ['off'],
-      },
-    },
-
-    // Vue
-    {
-      files: ['**/*.vue'],
-      extends: [
-        'airbnb-base',
-        'plugin:vue/vue3-recommended',
-        'plugin:prettier/recommended',
-      ],
-      rules: {
-        ...rules,
-        'vue/component-definition-name-casing': 'off',
-        'vue/require-default-prop': 'off',
-      },
-    },
-    {
-      files: ['**/*.vue', 'src/vue/shared/*.js'],
-      rules: {
-        ...rules,
-        'import/no-extraneous-dependencies': ['off'],
-        'no-dupe-keys': ['off'],
-      },
-    },
-    // VUE KITCHEN_SINK
-    {
-      files: ['kitchen-sink/vue/**/*.vue', 'kitchen-sink/vue/**/*.js'],
+      files: ['kitchen-sink/angular/**/*.ts', 'kitchen-sink/angular/**/*.js'],
       rules: {
         ...rules,
         'no-console': ['off'],
@@ -126,25 +61,13 @@ module.exports = {
       },
     },
 
-    // SVELTE KITCHEN_SINK
+    // Angular Source
     {
-      files: ['kitchen-sink/svelte/**/*.js'],
+      files: ['src/angular/**/*.ts'],
       rules: {
         ...rules,
-        'import/extensions': ['off'],
-        'no-restricted-globals': ['off'],
-        'import/no-unresolved': ['off'],
         'import/no-extraneous-dependencies': ['off'],
-      },
-    },
-    {
-      files: ['kitchen-sink/svelte/**/*.svelte'],
-      rules: {
-        ...rules,
-        'no-console': ['off'],
-        'no-return-assign': ['off'],
-        'implicit-arrow-linebreak': ['off'],
-        'no-restricted-globals': ['off'],
+        'no-dupe-keys': ['off'],
       },
     },
   ],

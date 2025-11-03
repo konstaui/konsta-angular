@@ -273,7 +273,7 @@ export class KPopoverComponent {
     this.styleSig.set({ top: popoverTop, left: popoverLeft });
     this.positionSig.set(popoverPosition);
 
-    if (this.angle() && angleTop !== undefined && angleLeft !== undefined) {
+    if (this.angle() && angleTop !== undefined && angleLeft !== undefined && anglePosition !== undefined) {
       this.angleStyleSig.set({ top: angleTop, left: angleLeft });
       this.anglePositionSig.set(anglePosition);
     }

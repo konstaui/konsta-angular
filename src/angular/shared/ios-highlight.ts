@@ -25,10 +25,9 @@ export const useIosHighlight = (options: UseIosHighlightOptions) => {
     const { attachEvents, detachEvents, removeHoverHighlight } =
       sharedUseIosHighlight({
         getEl: () => options.element() ?? el,
-        enabled: () =>
-          (options.enabled?.() ?? true) && ctx.iosHoverHighlight(),
+        enabled: () => (options.enabled?.() ?? true) && ctx.iosHoverHighlight(),
         data: highlightData,
-      });
+      } as any);
 
     attachEvents();
 

@@ -353,11 +353,11 @@ export class KListInputComponent {
             isFocused: this.focused(),
             darkClasses: this.dark,
             getLabelColor: () => this.labelColor(),
-            inputClassName: this.inputClassName() ?? '',
             hasLabel: !!this.label(),
-          }
+          },
+          this.className()
         ),
-        this.className()
+        ''
       ) as Record<string, any>
   );
 

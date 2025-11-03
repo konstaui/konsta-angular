@@ -1,33 +1,54 @@
 {
   "name": "konsta",
-  "version": "5.0.1",
-  "description": "Mobile UI components made with Tailwind CSS",
+  "version": "5.0.4",
+  "description": "Mobile UI components for Angular made with Tailwind CSS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/konstaui/konsta.git"
+    "url": "https://github.com/yourusername/konsta.git"
   },
-  "keywords": [],
+  "keywords": [
+    "angular",
+    "components",
+    "ui",
+    "mobile",
+    "tailwind",
+    "tailwindcss",
+    "ios",
+    "material",
+    "design"
+  ],
   "author": "Martin Donadieu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/konstaui/konsta/issues"
+    "url": "https://github.com/yourusername/konsta/issues"
   },
-  "homepage": "https://konstaui.com",
+  "homepage": "https://github.com/yourusername/konsta",
   "engines": {
-    "node": ">= 4.7.0"
+    "node": ">= 18.0.0"
   },
-  "releaseDate": "August 18, 2025",
+  "releaseDate": "November 3, 2025",
   "dependencies": {
     "tailwind-merge": "^3.3.1"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=14.0.0",
+    "@angular/core": ">=14.0.0",
+    "tailwindcss": ">=3.0.0"
   },
   "exports": {
     "./package.json": "./package.json",
     "./theme.css": "./theme.css",
+    ".": {
+      "types": "./angular/konsta-angular.d.ts",
+      "import": "./angular/konsta-angular.js",
+      "default": "./angular/konsta-angular.js"
+    },
     "./angular": {
       "types": "./angular/konsta-angular.d.ts",
       "import": "./angular/konsta-angular.js"
     },
     "./angular/theme.css": "./angular/theme.css",
+    "./styles": "./angular/theme.css",
     "./config": "./config.js",
     "./config.js": "./config.js"
   }

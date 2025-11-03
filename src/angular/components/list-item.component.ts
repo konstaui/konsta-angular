@@ -440,7 +440,7 @@ export class KListItemComponent {
   });
   readonly mediaClasses: Signal<string> = computed(() => {
     const baseClasses = this.listClasses()['media'] as string;
-    // Hide media container when empty to match React behavior
+    // Hide media container when empty
     if (!this.media() && !this.hasMediaContent()) {
       return `${baseClasses.replace(/me-\d+/g, '')} hidden`;
     }

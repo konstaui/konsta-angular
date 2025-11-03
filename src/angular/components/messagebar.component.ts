@@ -160,12 +160,12 @@ export class KMessagebarComponent {
       this.theme() === 'ios'
         ? this.palette()['bgIos'] ?? ''
         : this.palette()['bgMaterial'] ?? '';
-    // Add padding classes to match React structure
+    // Add padding classes for proper layout
     return cls(base, bg, 'pb-safe-4 px-safe-4');
   });
   readonly toolbarInnerClass: Signal<string> = computed(() => {
     const base = this.classes()['toolbarInner'] as string;
-    // Add necessary classes to match React structure: height, flex layout, positioning
+    // Add necessary classes: height, flex layout, positioning
     return cls(base, 'h-12 flex relative justify-between');
   });
   readonly leftClass: Signal<string> = computed(

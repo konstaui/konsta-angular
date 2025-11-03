@@ -106,8 +106,6 @@ async function release() {
     'rm -rf *.less',
     'rm -rf **/*.scss',
     'rm -rf *.scss',
-    'rm -rf **/*.svelte',
-    'rm -rf *.svelte',
   ];
 
   await exec.promise('git pull');
@@ -128,9 +126,7 @@ async function release() {
   } else {
     await exec.promise('cd ./package && npm publish');
   }
-  await exec.promise('npm run build-react-ks');
-  await exec.promise('npm run build-vue-ks');
-  await exec.promise('npm run build-svelte-ks');
+  await exec.promise('npm run build-angular-ks');
 }
 
 release();
